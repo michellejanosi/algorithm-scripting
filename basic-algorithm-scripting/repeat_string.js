@@ -8,7 +8,7 @@ function repeatStringNumTimes(str, num) {
   if(num < 0) {
     return "";
   }
-  // use the built in repeat method to return a new string repeated 'num' number of times
+  // use the built-in repeat method to return a new string repeated 'num' number of times
   return str.repeat(num);
 }
 
