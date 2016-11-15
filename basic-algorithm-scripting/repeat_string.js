@@ -13,3 +13,19 @@ function repeatStringNumTimes(str, num) {
 }
 
 repeatStringNumTimes("abc", 3);
+
+// an alternate solution
+
+function repeatStringNumTimes(str, num) {
+  var newStr = "";
+  // if num is greater than 0, loop through string and increase until i is equal to num
+  if(num > 0) {
+    for(var i = 0; i < num; i++) {
+      //newStr will equal str num times
+      newStr += str;
+    }
+  }
+  return newStr;
+}
+
+repeatStringNumTimes("abc", 3);
