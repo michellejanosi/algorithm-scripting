@@ -12,7 +12,6 @@ function slasher(arr, howMany) {
 slasher([1, 2, 3], 2); // returns [3]
 
 // another solution using a 'for' loop
-
 function slasher(arr, howMany) {
   // loop through array 'howMany' times starting at index 0
   for(var i = 0; i < howMany; i++) {
@@ -21,4 +20,15 @@ function slasher(arr, howMany) {
     return arr;
   }
 }
+slasher([1, 2, 3], 2); // returns [3]
+
+// and another using a 'while' loop
+function slasher(arr, howMany) {
+  while(howMany > 0) {
+    arr.shift();
+    howMany--;
+  }
+  return arr;
+}
+
 slasher([1, 2, 3], 2); // returns [3]
