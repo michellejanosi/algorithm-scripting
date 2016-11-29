@@ -10,3 +10,15 @@ function slasher(arr, howMany) {
 }
 
 slasher([1, 2, 3], 2); // returns [3]
+
+// another solution using a 'for' loop
+
+function slasher(arr, howMany) {
+  // loop through array 'howMany' times starting at index 0
+  for(var i = 0; i < howMany; i++) {
+    // use shift method to remove 'howMany' elements from the head of array
+    arr.shift();
+    return arr;
+  }
+}
+slasher([1, 2, 3], 2); // returns [3]
