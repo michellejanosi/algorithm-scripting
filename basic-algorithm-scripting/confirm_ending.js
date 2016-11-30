@@ -13,7 +13,7 @@ confirmEnding("Bastian", "n"); // returns true
 
 // another solution using the substring() method.
 function confirmEnding(str, target) {
-  // use the .substring() method the substring of str. The .lastIndexOf() method
+  // use the .substring() method to return the substring of str. The .lastIndexOf() method
   // returns the index number of the last occurance of said target. If the target
   // is not found, .lastIndexOf() returns -1. All this compared to target returns
   // true or false.
