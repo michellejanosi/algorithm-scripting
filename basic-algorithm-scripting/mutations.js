@@ -21,3 +21,20 @@ function mutation(arr) {
 }
 
 mutation(["Mary", "Aarmy"]);
+
+// just discovered the 'for ... in' loop. Useful for this challenge
+function mutation(arr) {
+  var str1 = arr[0].toLowerCase();
+  var str2 = arr[1].toLowerCase();
+
+  // The for/in statement loops through the properties of an object.
+  // The block of code inside the loop will be executed once for each property.
+  for(var i in str2) {
+    if(str1.indexOf(str2[i]) === -1) {
+      return false;
+    }
+  }
+  return true;
+}
+
+mutation(["hello", "hey"]); // returns false
