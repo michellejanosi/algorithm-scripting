@@ -25,3 +25,20 @@ function diffArray(arr1, arr2) {
 diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]); // returns [4]
 diffArray(["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite",
 "andesite", "grass", "dirt", "dead shrub"]; // returns ["diorite", "pink wool"]
+
+// alternate solution
+function diffArray(arr1, arr2) {
+  var newArr = arr1.concat(arr2); // combine the 2 arrays to make one big array
+
+  // a search function to find the unique element of the 2 arrays
+  function search(el) {
+    if((arr1.indexOf(el) === -1) || (arr2.indexOf(el) === -1)) {
+      return el;
+    }
+  }
+
+  // return new array that filters out the unique element found in the search function
+  return newArr.filter(search);
+}
+
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
